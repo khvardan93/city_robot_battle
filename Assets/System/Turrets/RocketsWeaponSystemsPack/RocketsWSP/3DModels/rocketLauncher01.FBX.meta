@@ -1,0 +1,122 @@
+fileFormatVersion: 2
+guid: 673dcab6a43b78e478c4f6dc033a61c6
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Launcher01
+    100002: Launcher02
+    100004: Launcher03
+    100006: Launcher04
+    100008: Launcher05
+    100010: Launcher06
+    100012: Launcher07
+    100014: Launcher08
+    100016: Launcher09
+    100018: Launcher10
+    100020: RocketCradle
+    100022: //RootNode
+    100024: RocketLauncherBase
+    400000: Launcher01
+    400002: Launcher02
+    400004: Launcher03
+    400006: Launcher04
+    400008: Launcher05
+    400010: Launcher06
+    400012: Launcher07
+    400014: Launcher08
+    400016: Launcher09
+    400018: Launcher10
+    400020: RocketCradle
+    400022: //RootNode
+    400024: RocketLauncherBase
+    2300000: Launcher01
+    2300002: Launcher02
+    2300004: Launcher03
+    2300006: Launcher04
+    2300008: Launcher05
+    2300010: Launcher06
+    2300012: Launcher07
+    2300014: Launcher08
+    2300016: Launcher09
+    2300018: Launcher10
+    2300020: RocketCradle
+    2300022: RocketLauncherBase
+    3300000: Launcher01
+    3300002: Launcher02
+    3300004: Launcher03
+    3300006: Launcher04
+    3300008: Launcher05
+    3300010: Launcher06
+    3300012: Launcher07
+    3300014: Launcher08
+    3300016: Launcher09
+    3300018: Launcher10
+    3300020: RocketCradle
+    3300022: RocketLauncherBase
+    4300000: RocketLauncherBase
+    4300002: RocketCradle
+    4300004: Launcher01
+    4300006: Launcher02
+    4300008: Launcher03
+    4300010: Launcher04
+    4300012: Launcher05
+    4300014: Launcher06
+    4300016: Launcher07
+    4300018: Launcher08
+    4300020: Launcher09
+    4300022: Launcher10
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

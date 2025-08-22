@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 4445d435c8684e24ba7d25d2e25145e8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: FortressBase
+    100002: FortressBase01
+    100004: //RootNode
+    100006: Launcher01
+    100008: Launcher02
+    100010: Launcher03
+    100012: Launcher04
+    100014: Launcher05
+    100016: Launcher06
+    100018: Launcher07
+    100020: Launcher08
+    100022: Launcher09
+    100024: Launcher10
+    100026: RocketCradle
+    100028: RocketLauncherBase
+    400000: FortressBase
+    400002: FortressBase01
+    400004: //RootNode
+    400006: Launcher01
+    400008: Launcher02
+    400010: Launcher03
+    400012: Launcher04
+    400014: Launcher05
+    400016: Launcher06
+    400018: Launcher07
+    400020: Launcher08
+    400022: Launcher09
+    400024: Launcher10
+    400026: RocketCradle
+    400028: RocketLauncherBase
+    2300000: FortressBase01
+    2300002: Launcher01
+    2300004: Launcher02
+    2300006: Launcher03
+    2300008: Launcher04
+    2300010: Launcher05
+    2300012: Launcher06
+    2300014: Launcher07
+    2300016: Launcher08
+    2300018: Launcher09
+    2300020: Launcher10
+    2300022: RocketCradle
+    2300024: RocketLauncherBase
+    2300026: //RootNode
+    3300000: FortressBase01
+    3300002: Launcher01
+    3300004: Launcher02
+    3300006: Launcher03
+    3300008: Launcher04
+    3300010: Launcher05
+    3300012: Launcher06
+    3300014: Launcher07
+    3300016: Launcher08
+    3300018: Launcher09
+    3300020: Launcher10
+    3300022: RocketCradle
+    3300024: RocketLauncherBase
+    3300026: //RootNode
+    4300000: RocketLauncherBase
+    4300002: RocketCradle
+    4300004: Launcher01
+    4300006: Launcher02
+    4300008: Launcher03
+    4300010: Launcher04
+    4300012: Launcher05
+    4300014: Launcher06
+    4300016: Launcher07
+    4300018: Launcher08
+    4300020: Launcher09
+    4300022: Launcher10
+    4300024: FortressBase01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

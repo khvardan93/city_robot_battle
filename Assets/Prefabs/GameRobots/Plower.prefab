@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3536160588960876949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3536160588960876947}
+  - component: {fileID: 5735750123801437961}
+  - component: {fileID: -5041372005055151374}
+  - component: {fileID: 7448997791900355100}
+  m_Layer: 3
+  m_Name: Plower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3536160588960876947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536160588960876949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.81, y: -0.05, z: -9.14}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 467774110234937799}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &5735750123801437961
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536160588960876949}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 50
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 3
+  m_BaseOffset: -0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &-5041372005055151374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536160588960876949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd3008a0bc64424fabfdbff95365492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _robotType: 0
+  _robot: {fileID: 5606853276456672448}
+  _guid:
+    _guid: 92b9a65f-456e-4fea-8fdb-a79c3b26c0d3
+  _currentRobotMoveState: 0
+  _navMesh: {fileID: 7448997791900355100}
+  _robotSpeed: 3
+  _rotationSpeed: 1000
+--- !u!114 &7448997791900355100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536160588960876949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b13ffe7e5992a9459219e5c50f6b16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 5735750123801437961}
+--- !u!1001 &3994456761537019988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3536160588960876947}
+    m_Modifications:
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536160588960876949, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+      propertyPath: m_Name
+      value: PlowerPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+--- !u!4 &467774110234937799 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3536160588960876947, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+  m_PrefabInstance: {fileID: 3994456761537019988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5606853276456672448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8836240709724740756, guid: 4dae05291940d5840a7c46154cc91d65, type: 3}
+  m_PrefabInstance: {fileID: 3994456761537019988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f51078bc2d8229c489626e0b55c67fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
