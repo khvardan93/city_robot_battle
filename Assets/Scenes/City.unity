@@ -488,11 +488,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SentryRobot
       objectReference: {fileID: 0}
+    - target: {fileID: 3209270008358135466, guid: 936331ed0c546444bb574f9cba3209a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 936331ed0c546444bb574f9cba3209a2, type: 3}
+--- !u!114 &686161515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4996691028381174483, guid: 936331ed0c546444bb574f9cba3209a2, type: 3}
+  m_PrefabInstance: {fileID: 686161514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264a5ac20dc00dd4fbf93e066af60435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &717410634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -573,7 +588,7 @@ MonoBehaviour:
   playerSettings: {fileID: 11400000, guid: eebeab27b1bb3154a97e3e795aa1206a, type: 2}
   player: {fileID: 940203391}
   enemySettings: {fileID: 11400000, guid: cc715053e98a83a479a5b42bf48e389a, type: 2}
-  enemy: {fileID: 0}
+  enemy: {fileID: 686161515}
 --- !u!1 &765481411
 GameObject:
   m_ObjectHideFlags: 0

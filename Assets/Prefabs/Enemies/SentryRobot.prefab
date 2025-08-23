@@ -926,10 +926,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2864938887391755280}
-  - component: {fileID: 2998594079529766077}
   - component: {fileID: 7293750269293843092}
   - component: {fileID: 2464810997463303758}
   - component: {fileID: 6893054638067587991}
+  - component: {fileID: 4996691028381174483}
   m_Layer: 8
   m_Name: SentryRobot
   m_TagString: Untagged
@@ -953,22 +953,6 @@ Transform:
   - {fileID: 2033536188355504355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2998594079529766077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3209270008358135466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264a5ac20dc00dd4fbf93e066af60435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyType: 1
-  _navMesh: {fileID: 6893054638067587991}
-  _animator: {fileID: 5409960755085856992}
-  _machineGun: {fileID: 6867322581549699467}
 --- !u!195 &7293750269293843092
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1027,6 +1011,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _agent: {fileID: 7293750269293843092}
+--- !u!114 &4996691028381174483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209270008358135466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264a5ac20dc00dd4fbf93e066af60435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyType: 1
+  _navMesh: {fileID: 6893054638067587991}
+  _animator: {fileID: 5409960755085856992}
+  _machineGun: {fileID: 6867322581549699467}
 --- !u!1 &3215772866014135326
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,6 +40,9 @@ namespace RobotBattle.Robot
         public void Init(PlayerSettings settings)
         {
             _navMesh.Init(settings.NavMesh);
+            var pool = System.Instance.GetModel<PoolModel>();
+
+            _robot.SetupWeapons(pool, settings.ShotGunSettings, null, null);
         }
         
         private void Awake()
@@ -110,9 +113,7 @@ namespace RobotBattle.Robot
             _maxShieldHealth = robotParams.shieldHealth;
             //set weapons
             var colliders = gameObject.GetComponentsInChildren<Collider>();
-            var pool = System.Instance.GetModel<PoolModel>();
-
-            _robot.SetupWeapons(pool, robotParams, weaponTargetScript, action);
+            
 
             return 0;//_shoulderWeapons.Length;
         }

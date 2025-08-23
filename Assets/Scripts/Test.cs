@@ -1,4 +1,3 @@
-using System;
 using RobotBattle.Enemy;
 using RobotBattle.Robot;
 using UnityEngine;
@@ -15,8 +14,10 @@ namespace RobotBattle
 
         private void Start()
         {
+            var poolModel = System.Instance.GetModel<PoolModel>();
+
             player.Init(playerSettings);
-            enemy.Init(enemySettings);
+            enemy.Init(enemySettings, poolModel);
         }
     }
 }

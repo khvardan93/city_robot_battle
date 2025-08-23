@@ -3,15 +3,15 @@ using UnityEngine;
 
 namespace RobotBattle.Enemy
 {
-    public abstract class SentryEnemy : EnemyBase
+    public class SentryEnemy : EnemyBase
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private MachineGunControllerScript _machineGun;
 
-        public virtual void Init(EnemySettings settings)
+        public virtual void Init(EnemySettings settings, PoolModel poolModel)
         {
             base.Init(settings);
-            _machineGun.Init(null, null, settings.Shotgun, null);
+            _machineGun.Init(poolModel, null, settings.Shotgun, null);
         }
         
         protected override void SetHoldState()

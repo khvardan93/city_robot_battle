@@ -17,12 +17,12 @@ namespace RobotBattle.Robot
         public CollisionDetectorScript CollisionDetectorScript => _collisionDetectorScript;
 
         #region Weapons
-        public void SetupWeapons(PoolModel poolModel, RobotData robotParams,  
+        public void SetupWeapons(PoolModel poolModel, ShotGunSettings weaponSettings,  
             WeaponTargetScript weaponTargetScript, Action<float,WeaponType,bool> action)
         {
             foreach (var weapon in _weapons)
             {
-                weapon.Init(poolModel, weaponTargetScript, null, action);
+                weapon.Init(poolModel, weaponTargetScript, weaponSettings, action);
             }
         }
         
