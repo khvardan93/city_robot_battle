@@ -37,12 +37,11 @@ namespace RobotBattle.Robot
 
         private RobotAchievementScript _lastKilledRobotScript;
 
-        public void Init(PlayerSettings settings)
+        public void Init(PlayerSettings settings, PoolModel poolModel)
         {
             _navMesh.Init(settings.NavMesh);
-            var pool = System.Instance.GetModel<PoolModel>();
 
-            _robot.SetupWeapons(pool, settings.ShotGunSettings, null, null);
+            _robot.SetupWeapons(poolModel, settings.ShotGunSettings, null, null);
         }
         
         private void Awake()

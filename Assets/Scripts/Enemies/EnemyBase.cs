@@ -1,6 +1,5 @@
 using RobotBattle.Robot;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace RobotBattle.Enemy
 {
@@ -45,22 +44,26 @@ namespace RobotBattle.Enemy
         {
             var state = CheckPlayerState();
             
-            if(state == CurrentState) return;
-            
-            CurrentState = state;
-
-            switch (state)
+            if(state != CurrentState)
             {
-                case State.Hold:
-                    SetHoldState();
-                    break;
-                case State.Chase:
-                    SetChaseState();
-                    break;
-                case State.Attack:
-                    SetAttackState();
-                    break;
+                CurrentState = state;
+
+                switch (state)
+                {
+                    case State.Hold:
+                        SetHoldState();
+                        break;
+                    case State.Chase:
+                        SetChaseState();
+                        break;
+                    case State.Attack:
+                        SetAttackState();
+                        break;
+                }
             }
+            
+            if(state != State.Hold) 
+                SetDirection();
         }
 
         private State CheckPlayerState()
@@ -85,7 +88,6 @@ namespace RobotBattle.Enemy
         protected virtual void SetChaseState()
         {
             _navMesh.GoToTarget(Player.position);
-            SetDirection();
         }
 
         protected virtual void SetAttackState()
@@ -99,8 +101,6 @@ namespace RobotBattle.Enemy
             var direction = (tr.position - player.position).normalized;
             var targetPos = player.position + direction * _scrKeepDistance;
             agent.GoToTarget(targetPos);
-
-            SetDirection();
         }
 
         private void SetDirection()

@@ -218,7 +218,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -238,8 +238,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -267,7 +267,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -354,7 +354,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -421,7 +421,152 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: OrangeSpider(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "\u0421\u043A\u0435\u043B\u0435\u0442"
+      parentName: OrangeSpider(Clone)
+      position: {x: -0.016679222, y: 0.011846773, z: 0.016746618}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Root
+      parentName: "\u0421\u043A\u0435\u043B\u0435\u0442"
+      position: {x: 0.0000018498522, y: 0.0000049050304, z: -0.0009064552}
+      rotation: {x: -0.27059796, y: -0.6532815, z: 0.6532816, w: 0.27059802}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Root
+      position: {x: -0.0000049980554, y: -0.00038246973, z: 0.0000012998177}
+      rotation: {x: 0.6921014, y: -0.14584741, z: 0.6921012, w: -0.14394547}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bone
+      parentName: Body
+      position: {x: -0.0000019050968, y: 0.0006141043, z: -0.00075990666}
+      rotation: {x: -0.49411458, y: 0.09211093, z: 0.18185487, w: 0.8451598}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Bone.001
+      parentName: Bone
+      position: {x: 8.699317e-11, y: 0.0015034616, z: -7.4505804e-11}
+      rotation: {x: -0.07331465, y: 0.091034025, z: 0.14040028, w: 0.9831712}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: Bone.002
+      parentName: Bone.001
+      position: {x: 4.0668055e-10, y: 0.00071400224, z: 2.6077032e-10}
+      rotation: {x: -0.012673251, y: 0.001477032, z: 0.0050229775, w: 0.999906}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: Bone.002_end
+      parentName: Bone.002
+      position: {x: -0, y: 0.002152566, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.003
+      parentName: Body
+      position: {x: -0.0000019051713, y: 0.0006141043, z: 0.0007613685}
+      rotation: {x: 0.6751191, y: 0.1339892, z: -0.26513198, w: 0.6752527}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bone.004
+      parentName: Bone.003
+      position: {x: 1.14105204e-10, y: 0.0015034617, z: -7.4505804e-11}
+      rotation: {x: 0.12801637, y: 0.0597568, z: -0.092162415, w: 0.9856709}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: Bone.005
+      parentName: Bone.004
+      position: {x: -3.0235242e-10, y: 0.00071400177, z: -1.11758706e-10}
+      rotation: {x: 0.008952091, y: 0.0013173738, z: -0.004479709, w: 0.99994904}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Bone.005_end
+      parentName: Bone.005
+      position: {x: -0, y: 0.0021525663, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.006
+      parentName: Body
+      position: {x: -0.00072772277, y: 0.0006036469, z: 0.000004908906}
+      rotation: {x: -0.03253701, y: -0.016310887, z: 0.9948505, w: 0.09459241}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.99999994}
+    - name: Bone.007
+      parentName: Bone.006
+      position: {x: 3.7252902e-11, y: 0.0015399334, z: 2.280558e-10}
+      rotation: {x: -0.09560057, y: 0.71362835, z: 0.1506954, w: 0.67741126}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1.0000001}
+    - name: Bone.008
+      parentName: Bone.007
+      position: {x: -5.8039403e-11, y: 0.00071627914, z: 3.7252902e-11}
+      rotation: {x: 0.19828266, y: 0.8153983, z: -0.14871913, w: 0.52315605}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: Bone.008_end
+      parentName: Bone.008
+      position: {x: -0, y: 0.0021446648, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.009
+      parentName: Body
+      position: {x: 0.0007479524, y: 0.0006036469, z: 0.000004908943}
+      rotation: {x: 0.0011890901, y: -0.035656244, z: -0.3935276, w: 0.9186203}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+    - name: Bone.010
+      parentName: Bone.009
+      position: {x: 3.7252902e-11, y: 0.001539933, z: 4.2200553e-12}
+      rotation: {x: 0.22019522, y: 0.661877, z: -0.16708583, w: 0.69678926}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bone.011
+      parentName: Bone.010
+      position: {x: 7.2309374e-11, y: 0.00071627944, z: 0}
+      rotation: {x: -0.4136194, y: -0.2124956, z: -0.059821352, w: 0.88328135}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Bone.011_end
+      parentName: Bone.011
+      position: {x: -0, y: 0.0021446645, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot
+      parentName: "\u0421\u043A\u0435\u043B\u0435\u0442"
+      position: {x: 0.0025455435, y: -0.00253666, z: -0.0012780859}
+      rotation: {x: 0, y: 0, z: 0.92387956, w: -0.3826833}
+      scale: {x: 1.0000004, y: 1, z: 1}
+    - name: Foot_end
+      parentName: Foot
+      position: {x: -0, y: 0.0005645637, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot.001
+      parentName: "\u0421\u043A\u0435\u043B\u0435\u0442"
+      position: {x: -0.0025336808, y: 0.002542563, z: -0.0012780859}
+      rotation: {x: -0.27059808, y: 0.65328145, z: 0.27059805, w: 0.6532815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot.001_end
+      parentName: Foot.001
+      position: {x: -0, y: 0.0005645633, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot.002
+      parentName: "\u0421\u043A\u0435\u043B\u0435\u0442"
+      position: {x: 0.0025354864, y: 0.0025390973, z: -0.0012525955}
+      rotation: {x: -0.27059788, y: -0.6532815, z: -0.27059785, w: 0.6532816}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot.002_end
+      parentName: Foot.002
+      position: {x: -0, y: 0.0006539724, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot.003
+      parentName: "\u0421\u043A\u0435\u043B\u0435\u0442"
+      position: {x: -0.0025484844, y: -0.0025448748, z: -0.0012525955}
+      rotation: {x: 0.9238797, y: -0.38268322, z: 0.00000006975099, w: 0.000000028891781}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Foot.003_end
+      parentName: Foot.003
+      position: {x: -0, y: 0.00065397285, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spider
+      parentName: OrangeSpider(Clone)
+      position: {x: -0.00001532957, y: 0.0039682984, z: -0.000032424927}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -432,7 +577,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
