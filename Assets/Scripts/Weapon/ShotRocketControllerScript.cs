@@ -10,10 +10,10 @@ namespace RobotBattle.Weapon
         protected int CurrentPositionIndex;
         protected bool ShootingAnimation;
 
-        public override void Init(PoolModel poolModel, WeaponTargetScript weaponTargetScript, 
+        public override void Init(PoolModel poolModel,  PoolOwner owner, WeaponTargetScript weaponTargetScript, 
             ShotGunSettings settings, Action<float, WeaponType, bool> callback)
         {
-            base.Init(poolModel, weaponTargetScript, settings, callback);
+            base.Init(poolModel, owner, weaponTargetScript, settings, callback);
 
             //TODO remove after fixing values
             Interval /= 2f;

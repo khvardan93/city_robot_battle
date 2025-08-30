@@ -80,7 +80,7 @@ namespace RobotBattle.Weapon
             }
         }
 
-        public virtual void Init(PoolModel poolModel, WeaponTargetScript weaponTargetScript,
+        public virtual void Init(PoolModel poolModel, PoolOwner owner, WeaponTargetScript weaponTargetScript,
             ShotGunSettings settings, Action<float, WeaponType, bool> callbeck)
         {
             WeaponTarget = weaponTargetScript;

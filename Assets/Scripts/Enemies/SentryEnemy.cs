@@ -11,7 +11,7 @@ namespace RobotBattle.Enemy
         public virtual void Init(EnemySettings settings, PoolModel poolModel)
         {
             base.Init(settings);
-            _machineGun.Init(poolModel, null, settings.Shotgun, null);
+            _machineGun.Init(poolModel, PoolOwner.OrangeSpider, null, settings.Shotgun, null);
         }
         
         protected override void SetHoldState()

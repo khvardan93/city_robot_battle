@@ -4,7 +4,7 @@ namespace RobotBattle
 {
     public class BasePoolObject : MonoBehaviour, IPoolObject
     {
-        private PoolGroup _poolGroup;
+        private PoolGroupHolder _poolGroupHolder;
         
         IPoolObject IPoolObject.Clone(Transform parent)
         {
@@ -16,9 +16,9 @@ namespace RobotBattle
             gameObject.SetActive(active);
         }
 
-        void IPoolObject.RegisterPoolGroup(PoolGroup poolGroup)
+        void IPoolObject.RegisterPoolGroup(PoolGroupHolder poolGroupHolder)
         {
-            _poolGroup = poolGroup;
+            _poolGroupHolder = poolGroupHolder;
         }
 
         void IPoolObject.SetParent(Transform parent)
@@ -34,7 +34,7 @@ namespace RobotBattle
         public virtual void Release()
         {
             gameObject.SetActive(false);
-            _poolGroup.Add(this);
+            _poolGroupHolder.Add(this);
         }
     }
 }

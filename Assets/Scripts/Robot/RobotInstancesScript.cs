@@ -22,7 +22,7 @@ namespace RobotBattle.Robot
         {
             foreach (var weapon in _weapons)
             {
-                weapon.Init(poolModel, weaponTargetScript, weaponSettings, action);
+                weapon.Init(poolModel, PoolOwner.Player, weaponTargetScript, weaponSettings, action);
             }
         }
         

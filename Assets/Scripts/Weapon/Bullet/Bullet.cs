@@ -7,14 +7,14 @@ namespace RobotBattle.Weapon
     {
         [SerializeField] private Rigidbody _rigidbody;
 
-        private PoolGroup _impactPool;
+        private PoolGroupHolder _impactPool;
         private BulletSettings _settings;
         
         public Rigidbody Rigidbody => _rigidbody;
         public float Damage => _settings.Damage;
         public RobotAchievementScript RobotAchievmentScript {private set; get;}
         
-        public void Init(PoolGroup impactPool, BulletSettings settings)
+        public void Init(PoolGroupHolder impactPool, BulletSettings settings)
         {
             _impactPool = impactPool;
             _settings = settings;

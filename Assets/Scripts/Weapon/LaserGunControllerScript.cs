@@ -10,10 +10,10 @@ namespace RobotBattle.Weapon
 
         private bool _shootingAnimation;
 
-        public override void Init(PoolModel poolModel, WeaponTargetScript weaponTargetScript, 
+        public override void Init(PoolModel poolModel, PoolOwner owner, WeaponTargetScript weaponTargetScript, 
             ShotGunSettings settings, Action<float, WeaponType, bool> callback)
         {
-            base.Init(poolModel, weaponTargetScript, null, callback);
+            base.Init(poolModel, owner, weaponTargetScript, null, callback);
 
             _shooter.bombType = 48;
 

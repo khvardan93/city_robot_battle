@@ -1,67 +1,19 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace RobotBattle
 {
-    public class PoolGroup : IDestructible
+    public enum PoolOwner
     {
-        private readonly Transform _holder;
-        private readonly Queue<IPoolObject> _pool = new();
-        private readonly int _prepCount;
-        private readonly IPoolObject _prefab;
-        
-        public PoolGroup(Transform holder, IPoolObject prefab, int prepCount)
-        {
-            _prepCount = prepCount;
-            _holder = holder;
-            _prefab = prefab;
-            
-            Prepare(holder, prefab, prepCount);
-        }
-
-        private void Prepare(Transform holder, IPoolObject prefab, int prepCount)
-        {
-            for (var i = 0; i < prepCount; i++)
-            {
-                var newItem = prefab.Clone(holder);
-                newItem.RegisterPoolGroup(this);
-                newItem.SetActive(false);
-                _pool.Enqueue(newItem);
-            }
-        }
-        
-        public void Add(IPoolObject item)
-        {
-            item.SetActive(false);
-            item.SetParent(_holder);
-            _pool.Enqueue(item);
-        }
-
-        public T Get<T>() where T : IPoolObject 
-        {
-            if(_pool.Count == 0)
-                Prepare(_holder, _prefab, _prepCount);
-            
-            return (T)_pool.Dequeue();
-        }
-
-        public void Destruct()
-        {
-            while (_pool.Count > 0)
-            {
-                _pool.Dequeue().Destroy();
-            }
-            
-            Object.Destroy(_holder.gameObject);
-        }
+        Generic = 0,
+        Player = 1,
+        OrangeSpider = 2, 
     }
 
     public class PoolModel : BaseModel, IDestructible
     {
         private PoolHolder _poolHolder;
-        private readonly Dictionary<Type, PoolGroup> _poolGroups = new ();
+        private readonly Dictionary<PoolOwner, PoolOwnerHolder> _poolOwners = new ();
         
         public PoolModel(System system) : base(system)
         {
@@ -72,28 +24,31 @@ namespace RobotBattle
             _poolHolder = poolHolder;
         }
 
-        public PoolGroup AddGroup<T>(T prefab, int prepCount) where T : IPoolObject
+        public PoolGroupHolder AddGroup<T>(T prefab, PoolOwner owner, int prepCount) where T : IPoolObject
         {
-            var type = typeof(T);
-            
-            if(_poolGroups.TryGetValue(type, out var group))
+            var ownerHolder = GetOwner(owner);
+            return ownerHolder.AddGroup(prefab, prepCount);
+        }
+
+        private PoolOwnerHolder GetOwner(PoolOwner owner)
+        {
+            if (_poolOwners.TryGetValue(owner, out var holder))
             {
-                return group;
+                return holder;
             }
             
-            var newHolder = new GameObject(type.Name).transform;
-            newHolder.SetParent(_poolHolder.transform);
-            group = new PoolGroup(newHolder, prefab, prepCount);
-            _poolGroups.Add(type, group);
-            return group;
+            var holderTransform = new GameObject(owner.ToString()).transform;
+            holder = new(holderTransform);
+            _poolOwners.Add(owner, holder);
+            return holder;
         }
 
         void IDestructible.Destruct()
         {
-            foreach (var group in _poolGroups)
+            foreach (var group in _poolOwners)
             {
                 group.Value.Destruct();
-                _poolGroups.Remove(group.Key);
+                _poolOwners.Remove(group.Key);
             }
         }
     }

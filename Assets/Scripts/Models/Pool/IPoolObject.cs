@@ -6,7 +6,7 @@ namespace RobotBattle
     {
         public IPoolObject Clone(Transform parent);
         public void SetActive(bool active);
-        public void RegisterPoolGroup(PoolGroup poolGroup);
+        public void RegisterPoolGroup(PoolGroupHolder poolGroupHolder);
         public void Release();
         public void SetParent(Transform parent);
         public void Destroy();

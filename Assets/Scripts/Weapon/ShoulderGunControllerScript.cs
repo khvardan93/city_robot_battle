@@ -10,10 +10,10 @@ namespace RobotBattle.Weapon
 
         private bool shootingAnimation;
 
-        public override void Init(PoolModel poolModel, WeaponTargetScript weaponTargetScript, 
+        public override void Init(PoolModel poolModel,  PoolOwner owner, WeaponTargetScript weaponTargetScript, 
             ShotGunSettings settings, Action<float, WeaponType, bool> callback)
         {
-            base.Init(poolModel, weaponTargetScript, settings, callback);
+            base.Init(poolModel, owner, weaponTargetScript, settings, callback);
 
             shooter.rapidFireCooldown = 0;//(float)weaponParams.FireDuration / (float)weaponParams.Capacity;
 

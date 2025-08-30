@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 199822515480979474}
   - component: {fileID: 198737689383679476}
   - component: {fileID: 5567342203196621060}
-  - component: {fileID: 8364044239780883392}
+  - component: {fileID: -3301109028163614274}
   m_Layer: 8
   m_Name: BulletPrefab
   m_TagString: FX
@@ -5015,7 +5015,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.12
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8364044239780883392
+--- !u!114 &-3301109028163614274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

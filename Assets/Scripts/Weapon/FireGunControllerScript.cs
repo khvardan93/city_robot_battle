@@ -16,11 +16,11 @@ namespace RobotBattle.Weapon
             return 0;//WeaponParams.Capacity * WeaponParams.Damage / WeaponParams.FireDuration;
         }
 
-        public override void Init(PoolModel poolModel, WeaponTargetScript weaponTargetScript,
+        public override void Init(PoolModel poolModel, PoolOwner owner, WeaponTargetScript weaponTargetScript,
             ShotGunSettings settings, Action<float, WeaponType, bool> callback)
         {
-            base.Init(poolModel, weaponTargetScript, settings, callback);
-            
+            base.Init(poolModel, owner, weaponTargetScript, settings, callback);
+
             Timer = 10f;
             _firePosition.gameObject.SetActive(true);
             FindParticles(_firePosition);

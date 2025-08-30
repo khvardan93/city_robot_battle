@@ -22,8 +22,8 @@ namespace RobotBattle.Weapon
         
         private ProjectileData _bomb;
         private Transform _transform;
-        private PoolGroup _buttonPool;
-        private PoolGroup _muzzlePool;
+        private PoolGroupHolder _buttonPool;
+        private PoolGroupHolder _muzzlePool;
 
         public ProjectileData Bomb
         {
@@ -38,13 +38,13 @@ namespace RobotBattle.Weapon
             }
         }
 
-        public void Init(PoolModel poolModel)
+        public void Init(PoolModel poolModel, PoolOwner poolOwner)
         {
             var bullet = Bomb.bombPrefab.GetComponent<Bullet>();
-            _buttonPool = poolModel.AddGroup<Bullet>(bullet, 100);
+            _buttonPool = poolModel.AddGroup<Bullet>(bullet, poolOwner, 100);
 
             var muzzle = Bomb.muzzleflare.GetComponent<BulletMuzzle>();
-            _muzzlePool = poolModel.AddGroup<BulletMuzzle>(muzzle, 15);
+            _muzzlePool = poolModel.AddGroup<BulletMuzzle>(muzzle, poolOwner, 15);
         }
 
         private void Awake()

@@ -9,9 +9,6 @@ namespace RobotBattle
         public PlayerSettings playerSettings;
         public PlayerController player;
         [Space] 
-        public EnemySettings enemySettings;
-        public SentryEnemy enemy;
-        [Space] 
         public EnemySettings spiderSettings;
         public OrangeSpiderEnemy spiderEnemy;
 
@@ -20,7 +17,6 @@ namespace RobotBattle
             var poolModel = System.Instance.GetModel<PoolModel>();
 
             player.Init(playerSettings, poolModel);
-            enemy.Init(enemySettings, poolModel);
             spiderEnemy.Init(spiderSettings, poolModel);
         }
     }

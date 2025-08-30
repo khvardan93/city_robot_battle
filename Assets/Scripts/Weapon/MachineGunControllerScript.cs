@@ -14,9 +14,9 @@ namespace RobotBattle.Weapon
         private bool _shootingAnimation;
         private BulletSettings _bulletSettings;
         
-        private PoolGroup _buttonPool;
-        private PoolGroup _muzzlePool;
-        private PoolGroup _impactPool;
+        private PoolGroupHolder _buttonPool;
+        private PoolGroupHolder _muzzlePool;
+        private PoolGroupHolder _impactPool;
 
         private void Start()
         {
@@ -24,16 +24,16 @@ namespace RobotBattle.Weapon
             Interval = _shotInterval;
         }
 
-        public override void Init(PoolModel poolModel, WeaponTargetScript weaponTargetScript,
+        public override void Init(PoolModel poolModel, PoolOwner owner, WeaponTargetScript weaponTargetScript,
             ShotGunSettings settings, Action<float, WeaponType, bool> callback)
         {
-            base.Init(poolModel, weaponTargetScript, settings, callback);
+            base.Init(poolModel, owner, weaponTargetScript, settings, callback);
             
             _bulletSettings = settings.BulletSettings;
 
-            _buttonPool = poolModel.AddGroup(_bulletSettings.BulletPrefab, 100);
-            _muzzlePool = poolModel.AddGroup(_bulletSettings.MuzzlePrefab, 50);
-            _impactPool = poolModel.AddGroup(_bulletSettings.ImpactPrefab, 50);
+            _buttonPool = poolModel.AddGroup(_bulletSettings.BulletPrefab, owner, 100);
+            _muzzlePool = poolModel.AddGroup(_bulletSettings.MuzzlePrefab, owner, 50);
+            _impactPool = poolModel.AddGroup(_bulletSettings.ImpactPrefab, owner, 50);
         }
 
         public override void Rotate(float direction, float rotateSpeed)
