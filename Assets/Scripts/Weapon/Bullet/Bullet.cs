@@ -12,7 +12,6 @@ namespace RobotBattle.Weapon
         
         public Rigidbody Rigidbody => _rigidbody;
         public float Damage => _settings.Damage;
-        public RobotAchievementScript RobotAchievmentScript {private set; get;}
         
         public void Init(PoolGroupHolder impactPool, BulletSettings settings)
         {
@@ -27,7 +26,8 @@ namespace RobotBattle.Weapon
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "FX") return;
+            Debug.LogError(collision.gameObject.layer);
+            //if (collision.gameObject.tag == "FX") return;
             var contact = collision.contacts[0];
             var rot = Quaternion.FromToRotation(transform.forward, contact.normal);
             SetImpact(contact.point, rot);
@@ -38,7 +38,7 @@ namespace RobotBattle.Weapon
         private void SetImpact(Vector3 pos, Quaternion rot)
         {
             var impact = _impactPool.Get<BulletImpact>();
-            impact.transform.SetPositionAndRotation(pos, rot * Quaternion.Euler(0f, -90f, 0f));
+            impact.transform.SetPositionAndRotation(pos, rot * Quaternion.Euler(0f, 180f, 0f));
             impact.gameObject.SetActive(true);
         }
 

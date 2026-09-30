@@ -24,7 +24,7 @@ namespace RobotBattle.Robot
             var bulletDamageScript = collision.gameObject.GetComponent<Bullet>();
             if (bulletDamageScript)
             {
-                _playerController.OnHit(bulletDamageScript.Damage, bulletDamageScript.RobotAchievmentScript);
+                _playerController.OnHit(bulletDamageScript.Damage);
             }
         }
 
@@ -43,7 +43,7 @@ namespace RobotBattle.Robot
         {
             if (!_isFireDamage) return;
             
-            _playerController.OnHit(Time.deltaTime * _fireDamage, robotAchievementScript);
+            _playerController.OnHit(Time.deltaTime * _fireDamage);
             _isFireDamage = false;
         }
     }

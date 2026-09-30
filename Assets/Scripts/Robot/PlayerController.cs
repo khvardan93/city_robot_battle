@@ -144,10 +144,10 @@ namespace RobotBattle.Robot
             }
         }
 
-        public void OnHit(float damage, RobotAchievementScript robotAchievementScript)
+        public void OnHit(float damage)
         {
             _health -= damage;
-            robotAchievementScript.damage += damage;
+            /*robotAchievementScript.damage += damage;
             if (robotAchievementScript.isPlayer())
                 TaskManagerScript.instance.increaseDamageSize(robotAchievementScript.robotType, damage);
 
@@ -166,7 +166,7 @@ namespace RobotBattle.Robot
                 GetComponent<AbstractBehaviour>().OnDeath();
 
                 _robot.SetAllWeapons(false);
-            }
+            }*/
         }
 
         #endregion
